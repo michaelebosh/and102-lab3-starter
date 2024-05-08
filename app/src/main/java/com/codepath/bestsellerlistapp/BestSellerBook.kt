@@ -1,6 +1,9 @@
 package com.codepath.bestsellerlistapp
 
+import android.support.annotation.Keep
 import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * The Model for storing a single book from the NY Times API
@@ -21,10 +24,14 @@ class BestSellerBook {
     var author: String? = null
 
     //TODO bookImageUrl
+    @SerializedName("book_image")
+    var bookImageUrl: String? = null
 
 
     //TODO description
-
+    @SerializedName("description")
+    var description: String? = null
 
     //TODO-STRETCH-GOALS amazonUrl
+
 }
